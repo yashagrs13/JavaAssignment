@@ -11,11 +11,12 @@ public class CharacterCount {
         char target = sc.next().charAt(0);
 
         str = str.toLowerCase();
-        countOccurrence(str, target);
+        int result = countOccurrence(str, target);
+        System.out.println("The character '" + target + "' occurs '" + result + "' times in the String ");
         sc.close();
     }
 
-    static void countOccurrence(String str, char target) {
+    static int countOccurrence(String str, char target) {
         int count = 0;
 
         for (int i = 0; i < str.length(); i++) {
@@ -23,6 +24,6 @@ public class CharacterCount {
                 count++;
             }
         }
-        System.out.println("The character '" + target + "' occurs '" + count + "' times in the String ");
+        return count;
     }
 }
